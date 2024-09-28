@@ -1,0 +1,11 @@
+<h2>Carrinho</h2>
+<ul ng-if="vm.cartItems.length > 0">
+  <li ng-repeat="item in vm.cartItems">
+    <span>{{item.name}} - Quantidade: {{item.quantity}}</span>
+    <button ng-click="vm.updateCartItemQuantity(item, item.quantity - 1)">-</button>
+    <button ng-click="vm.updateCartItemQuantity(item, item.quantity + 1)">+</button>
+    <button ng-click="vm.removeFromCart($index)">Remover</button>
+    <p>Subtotal: ${{ item.quantity * item.price }}</p> 
+  </li>
+</ul>
+<p ng-if="vm.cartItems.length === 0">Seu carrinho está vazio!</p>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="rentalApp">
+<head>
+  <title>Rental Ecommerce</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <!-- Include your AngularJS files -->
+  <script src="app/app.module.js"></script>
+  <script src="app/app.config.js"></script>
+  <script src="app/services/auth.service.js"></script>
+  <script src="app/components/login/login.component.js"></script>
+  <script src="app/components/product-list/product-list.component.js"></script>
+  <script src="app/components/cart/cart.component.js"></script> 
+</head>
+<body ng-controller="MainController">
+  <header>
+    <h1>SISLOC</h1>
+    <h2>Gerenciamento de Bens Móveis</h2>
+    <div ng-if="isAuthenticated">
+      <button ng-click="logout()">Logout</button>
+    </div>  
+    <!-- <div ng-if="!isAuthenticated"> 
+      <a href="#/login">Login</a> 
+    </div> -->
+  </header>
+
+  <div ng-view></div> 
+</body>
+</html>

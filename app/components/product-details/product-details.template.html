@@ -1,0 +1,13 @@
+<div ng-if="vm.product"> 
+    <img ng-src="{{vm.product.image}}" alt="{{vm.product.name}}">
+    <h2>{{vm.product.name}}</h2>
+    <p>{{vm.product.description}}</p>
+    <p><strong>Technical Info:</strong> {{vm.product.technicalInfo}}</p>
+    <p><strong>Rental Prices:</strong></p>
+    <ul>
+      <li>Day: ${{vm.product.rentalPrices.day}}</li>
+      <li>Week: ${{vm.product.rentalPrices.week}}</li>
+      <li>Month: ${{vm.product.rentalPrices.month}}</li>
+    </ul>
+    <button ng-click="vm.addToCart()">Add to Cart</button>
+</div>

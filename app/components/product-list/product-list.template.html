@@ -1,0 +1,22 @@
+<h2>Products</h2>
+
+<input type="text" ng-model="vm.searchTerm" placeholder="Search products...">
+
+<ul>
+  <li ng-repeat="product in vm.products | filter: vm.searchTerm"> 
+    <a href="#/product/{{product.id}}"> <!-- Link to product details -->
+      <img ng-src="{{product.image}}" alt="{{product.name}}">
+      <h3>{{product.name}}</h3>
+      <p>{{product.description | limitTo: 50 }}...</p> <!-- Limit description length -->
+    </a>
+    <p>Price: ${{product.rentalPrices.day}} / day</p> 
+    <button ng-click="vm.addToCart(product)">Add to Cart</button> 
+  </li>
+</ul>
+
+<h2>Cart</h2>
+<ul>
+  <li ng-repeat="item in vm.cartItems"> 
+    <span>{{item.name}} - Quantity: {{item.quantity}}</span>
+  </li>
+</ul>
