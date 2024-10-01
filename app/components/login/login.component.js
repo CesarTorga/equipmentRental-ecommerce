@@ -4,18 +4,40 @@ angular.module('rentalApp')
 function LoginController($http, $location, AuthService) {
   var vm = this; // "Controller as" syntax
 
-  vm.login = function() {
-    $http.post('http://localhost:5500/api/login', { 
+  vm.login = async function() {
+    $http.post('http://localhost:3005/login', { 
       email: vm.email, 
       password: vm.password 
     })
     .then(function(response) {
       AuthService.setToken(response.data.token);
-      vm.$emit('login'); 
-      $location.path('/'); 
+      // vm.$emit('login'); 
+      $location.path('/products'); 
     }, function(error) {
       console.error("Login failed:", error);
-      // Handle login error (e.g., display a message)
+      if (error.status === 401) {
+        vm.loginError = "Invalid email or password.";
+      } else if (error.status === 405) {
+        vm.loginError = "Method not allowed. Please contact support.";
+      } else {
+        vm.loginError = "An error occurred. Please try again later.";
+      }
+    })
+    .catch(function(error){
+      console.log(error);
     });
   };
+
+  // vm.logout = function() {
+  //   $http.get('/logout')
+  //     .then(function(response) {
+  //       // 1. Clear local storage/cookies (if applicable)
+  //       AuthService.logout(); 
+  //       vm.isAuthenticated = false;
+  //       $location.path('/login'); 
+  //     }, function(error) {
+  //       console.error("Logout failed:", error);
+  //       // Handle logout error
+  //     });
+  // };
 }

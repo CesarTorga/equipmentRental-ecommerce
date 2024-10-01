@@ -1,0 +1,12 @@
+.product-list-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.product-item {
+    /* Add styles for individual product items here */
+    margin: 10px;
+}

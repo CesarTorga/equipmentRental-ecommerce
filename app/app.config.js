@@ -19,7 +19,6 @@ angular.module('rentalApp')
       controller: 'ProductDetailsController',
       controllerAs: 'vm'
     })
-    // Add more routes as needed
     .otherwise({
       redirectTo: '/login'
     });
