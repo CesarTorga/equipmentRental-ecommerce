@@ -14,7 +14,7 @@ angular.module('rentalApp')
       controller: 'ProductListController',
       controllerAs: 'vm'
     })
-    .when('/product/:productId', { // Product Details route
+    .when('/products/:productId', { // Product Details route
       templateUrl: 'app/components/product-details/product-details.template.html',
       controller: 'ProductDetailsController',
       controllerAs: 'vm'

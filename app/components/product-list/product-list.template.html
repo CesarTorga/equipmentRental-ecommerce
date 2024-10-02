@@ -4,11 +4,11 @@
 
 <div class="product-list-container">
   <div class="product-item" ng-repeat="product in vm.products"> 
-    <a href="#/product/{{product.id}}"> <!-- Link to product details -->
-      <img ng-src="{{product.image}}" alt="{{product.name}}">
-      <h3>{{product.name}}</h3>
-      <p>{{product.description | limitTo: 50 }}...</p> <!-- Limit description length -->
+    <a ng-href="#!/products/{{product.id}}"> <!-- Link to product details -->
+      <img ng-src="{{product.image}}" alt="{{product.name}}">    
     </a>
+    <h3>{{product.name}}</h3>
+      <p>{{product.description | limitTo: 50 }}...</p> <!-- Limit description length -->
     <p>Price: ${{product.rentalPrices.day}} / day</p> 
     <button ng-click="vm.addToCart(product)">Add to Cart</button> 
   </div>

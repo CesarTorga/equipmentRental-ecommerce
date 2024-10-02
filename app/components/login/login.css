@@ -1,0 +1,19 @@
+.title {
+    font-family: 'Open Sans', sans-serif;
+}
+.input-container {
+    margin-bottom: 10px; /* Adiciona espaçamento entre os campos */
+    text-align: center; /* Centraliza o conteúdo dos campos */
+    font-family: 'Roboto', sans-serif;
+}
+  
+.login-button {
+display: block; /* Ocupa toda a largura disponível */
+margin: 20px auto; /* Adiciona margem superior e inferior, centralizando verticalmente */
+padding: 10px 20px; /* Adiciona espaçamento interno */
+background-color: #4CAF50; /* Cor de fundo do botão */
+color: white; /* Cor do texto */
+border: none; /* Remove a borda padrão */
+border-radius: 5px; /* Arredonda as bordas */
+cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse */
+}

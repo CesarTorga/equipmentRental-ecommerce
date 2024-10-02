@@ -14,11 +14,6 @@ function ProductListController($http) {
       console.log(error);
     });
 
-  // $http.get('/products')
-  //   .then(function(response) {
-  //     vm.products = response.data;
-  //   });
-
   // vm.addToCart = function(product) {
   //   var existingItem = vm.cartItems.find(function(item) {
   //     return item.id == product.id;
