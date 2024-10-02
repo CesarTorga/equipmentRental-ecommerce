@@ -1,0 +1,61 @@
+.product-details {
+  display: flex;
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  justify-content: center;
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center;
+  padding: 20px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
+  margin-top: 300px;
+}
+
+.product-title {
+  font-size: 1.8em; /* Aumenta o tamanho da fonte */
+  margin-bottom: 10px;
+}
+
+/* Estilos para o card de informações do produto */
+.product-card.product-info { 
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 600px; /* Define uma largura máxima para o card */
+  margin-bottom: 20px; /* Adiciona espaçamento entre os cards */
+}
+
+.product-info p {
+  font-size: 1.2em; /* Aumenta o tamanho da fonte */
+  margin-bottom: 15px;
+}
+
+/* Estilos para o card de preços de aluguel */
+.product-card.rental-prices { 
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 600px; /* Define uma largura máxima para o card */
+}
+
+.rental-prices ul {
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding: 0;
+}
+
+.rental-prices li {
+  font-weight: bold; /* Negrito para os preços */
+  margin-bottom: 5px;
+}
+
+.actionButtons {
+  margin-top: 20px; /* Adiciona espaçamento acima do botão */
+} 
+
+.back-to-list {
+  margin-left: 20px; /* Adiciona espaçamento acima do botão */
+} 

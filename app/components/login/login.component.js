@@ -27,17 +27,4 @@ function LoginController($http, $location, AuthService) {
       console.log(error);
     });
   };
-
-  // vm.logout = function() {
-  //   $http.get('/logout')
-  //     .then(function(response) {
-  //       // 1. Clear local storage/cookies (if applicable)
-  //       AuthService.logout(); 
-  //       vm.isAuthenticated = false;
-  //       $location.path('/login'); 
-  //     }, function(error) {
-  //       console.error("Logout failed:", error);
-  //       // Handle logout error
-  //     });
-  // };
 }

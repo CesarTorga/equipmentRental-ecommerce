@@ -1,13 +1,32 @@
-<div ng-if="vm.product"> 
-    <img ng-src="{{vm.product.image}}" alt="{{vm.product.name}}">
-    <h2>{{vm.product.name}}</h2>
-    <p>{{vm.product.description}}</p>
-    <p><strong>Technical Info:</strong> {{vm.product.technicalInfo}}</p>
-    <p><strong>Rental Prices:</strong></p>
-    <ul>
-      <li>Day: ${{vm.product.rentalPrices.day}}</li>
-      <li>Week: ${{vm.product.rentalPrices.week}}</li>
-      <li>Month: ${{vm.product.rentalPrices.month}}</li>
-    </ul>
-    <button ng-click="vm.addToCart()">Add to Cart</button>
-</div>
+<head>
+  <link rel="stylesheet" href="app/components/product-details/product-details.css">
+</head>
+
+<body>
+  <div ng-if="vm.product" class="product-details"> 
+    <img ng-src="{{vm.product.image}}" alt="{{vm.product.name}}" class="product-image">
+    <h2 class="product-title">{{vm.product.name}}</h2>
+
+    <div class="product-card product-info">
+      <div class="product-info">
+        <p>{{vm.product.description}}</p>
+        <p><strong>Informações Técnicas:</strong> {{vm.product.technicalInfo}}</p>
+      </div>
+    </div>
+      
+    <div class="product-card rental-prices">
+      <p><strong>Valores do aluguel:</strong></p>
+      <ul>
+        <li>Day: ${{vm.product.rentalPrices.day}}</li>
+        <li>Week: ${{vm.product.rentalPrices.week}}</li>
+        <li>Month: ${{vm.product.rentalPrices.month}}</li>
+      </ul>
+    </div> 
+    
+    <div class="actionButtons">
+      <button ng-click="vm.addToCart()" >Adicione ao Carrinho</button>
+      <button ng-click="vm.backToList()" class="back-to-list">Voltar pra Lista</button>
+    </div>
+    
+  </div>
+</body>

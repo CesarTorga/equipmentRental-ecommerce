@@ -1,0 +1,58 @@
+.product-grid {
+    display: grid; /* Ativa o layout Grid */
+    grid-template-columns: repeat(3, 1fr); /* Define as colunas do grid */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: 10px;
+    height: 100%;
+}
+  
+.product-card {
+    border: 1px solid #ccc; /* Borda do card */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 5px; /* Arredonda as bordas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+}
+  
+.product-card img {
+    max-width: 100%; /* Largura máxima da imagem */
+    height: 200px; /* Altura da imagem */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+  
+.price {
+    font-weight: bold; /* Negrito para o preço */
+}
+
+.description {
+    font-size: large; /* Negrito para o preço */
+}
+
+.cart-card {
+    border: 2px solid #ffa600;;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cart-card ul {
+    list-style-type: none; /* Remove os pontos da lista */
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.cart-card li {
+    margin-bottom: 15px; /* Aumenta o espaçamento entre as linhas */
+    line-height: 1.8em; /* Aumenta a altura da linha para espaçar os elementos */
+}
+  
+.cart-card input[type="number"] {
+    width: 50px; /* Diminui a largura do campo de número */
+    padding: 5px;
+    text-align: center;
+}
+  
+.cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+}

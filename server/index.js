@@ -19,12 +19,6 @@ app.use(express.json());
 // Use Routes
 app.use('/', authRoutes);
 app.use('/products', productRoutes);
-// app.use('/api/stores', storeRoutes);
-
-// app.use('*', (req, res) => {
-//   console.log('Request path:', req.path); // Log the requested path for debugging
-//   res.status(404).json({ message: 'Not Found' });
-// });
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);

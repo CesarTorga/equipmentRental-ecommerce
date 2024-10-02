@@ -4,7 +4,7 @@ body {
     justify-content: center; /* Centraliza verticalmente */
     align-items: center; /* Centraliza horizontalmente */
     text-align: center; /* Centraliza o texto */
-    height: 100vh; /* Define a altura como 100% da altura da janela */
+    height: 110vh; /* Define a altura como 100% da altura da janela */
     margin: 0; /* Remove as margens padrão do body */
 }
   
@@ -13,8 +13,13 @@ position: absolute; /* Posiciona o header no topo */
 top: 0;
 left: 0;
 right: 0; /* Ocupa toda a largura da tela */
-background-color: #f0f0f0; /* Cor de fundo do header (opcional) */
+background-color: #ffa600; /* Cor de fundo do header (opcional) */
 padding: 10px; /* Espaçamento interno do header (opcional) */
+}
+
+ng-view {
+    height: calc(110vh - 210px); /* Altura total da janela - altura do header */
+    overflow-y: auto; /* Adiciona uma barra de rolagem se necessário */
 }
 
 .title {

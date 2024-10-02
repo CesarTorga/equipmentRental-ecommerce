@@ -1,29 +1,58 @@
 angular.module('rentalApp')
   .controller('ProductListController', ProductListController);
 
-function ProductListController($http) {
+function ProductListController($http, CartService) {
   var vm = this;
   vm.products = [];
-  vm.cartItems = [];
+  vm.filteredProducts = [];
 
-    $http.get('http://localhost:3005/products')
-    .then(function(response) {
-      vm.products = response.data;
+  $http.get('http://localhost:3005/products')
+  .then(function(response) {
+    vm.products = response.data;
+    vm.filterProducts();
 
-    }).catch(function(error){
-      console.log(error);
-    });
+  }).catch(function(error){
+    console.log(error);
+  });
 
-  // vm.addToCart = function(product) {
-  //   var existingItem = vm.cartItems.find(function(item) {
-  //     return item.id == product.id;
-  //   });
+  vm.filterProducts = function() {
+    // Lógica de filtro
+    if (vm.searchTerm) {
+      vm.filteredProducts = vm.products.filter(function(product) {
+        return product.name.toLowerCase().includes(vm.searchTerm.toLowerCase());
+      });
+    } else {
+      vm.filteredProducts = vm.products; // Exibe todos os produtos se o termo de busca estiver vazio
+    }
+  };
 
-  //   if (existingItem) {
-  //     existingItem.quantity++;
-  //   } else {
-  //     vm.cartItems.push(angular.copy(product)); 
-  //     vm.cartItems[vm.cartItems.length - 1].quantity = 1;
-  //   }
-  // };
+  vm.addToCart = function(product) {
+    CartService.addToCart(product); 
+  };
+
+  vm.cartItems = CartService.getCartItems();
+
+  vm.getTotalCartValue = function() {
+    return CartService.getTotalCartValue(); 
+  };
+
+  vm.removeFromCart = function(item) {
+    CartService.removeFromCart(item); 
+  };
+
+  vm.addQuantity = function(item) {
+    item.quantity++;
+    vm.updateCart(); // Atualiza o carrinho (inclui o valor total)
+  };
+  
+  vm.subtractQuantity = function(item) {
+    if (item.quantity > 1) {
+      item.quantity--;
+      vm.updateCart(); // Atualiza o carrinho (inclui o valor total)
+    }
+  };
+
+  vm.updateCart = function() {
+    vm.totalCartValue = CartService.getTotalCartValue();
+  };
 }

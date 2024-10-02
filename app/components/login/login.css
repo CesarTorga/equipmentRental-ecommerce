@@ -11,7 +11,7 @@
 display: block; /* Ocupa toda a largura disponível */
 margin: 20px auto; /* Adiciona margem superior e inferior, centralizando verticalmente */
 padding: 10px 20px; /* Adiciona espaçamento interno */
-background-color: #4CAF50; /* Cor de fundo do botão */
+background-color: #ffa600; /* Cor de fundo do botão */
 color: white; /* Cor do texto */
 border: none; /* Remove a borda padrão */
 border-radius: 5px; /* Arredonda as bordas */
