@@ -1,32 +1,12 @@
-#Equipment Rental E-commerce
+# Equipment Rental E-commerce
 Este projeto consiste em um e-commerce para aluguel de equipamentos desenvolvido com AngularJS (front-end) e Node.js (back-end).
 
-##Estrutura do Projeto
+## Estrutura do Projeto
 O projeto possui a seguinte estrutura de pastas:
 
-equipmentRental-ecommerce/
-├── app/                    # Código fonte do front-end (AngularJS)
-│   ├── components/         # Componentes reutilizáveis da interface
-│   │   ├── componentName/
-│   │   │   ├── componentName.html    # Template do componente
-│   │   │   ├── componentName.css     # Estilos do componente
-│   │   │   └── componentName.js      # Lógica do componente
-│   │   └── ...
-│   ├── services/            # Serviços para comunicação com o back-end
-│   ├── app.config.js        # Arquivo routeProvider do AngularJS
-|   └── app.module.js        # Controlador de Autenticação
-├── server/                 # Código fonte do back-end (Node.js)
-│   ├── data/                # Camada de dados (ex: conexão com banco de dados)
-│   ├── controllers/         # Controladores para rotas de autenticação e produtos
-│   │   ├── authController.js
-│   │   └── productsController.js
-│   ├── routes/              # Definição das rotas da API
-│   │   ├── authRoutes.js
-│   │   └── productsRoutes.js
-│   └── server.js            # Arquivo principal do servidor Node.js
-└── index.html               # Página inicial do projeto
+<img width="449" alt="image" src="https://github.com/user-attachments/assets/179e8506-4332-44a4-aacb-505401de858f">
 
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
 **Front-end:**
 * AngularJS
 * HTML
@@ -43,7 +23,7 @@ Pré-requisitos:
 Node.js e npm instalados
 Um gerenciador de pacotes como o npm ou yarn
 
-##Passos:
+## Passos:
 Clonar o repositório:
 
 git clone https://github.com/seu-usuario/equipmentRental-ecommerce.git
@@ -74,7 +54,7 @@ O servidor de desenvolvimento do front-end estará disponível na porta 3000.
 
 Abra o navegador e acesse http://localhost:3000/.
 
-##Próximos Passos
+## Próximos Passos
 Implementar a camada de dados e conectar ao banco de dados escolhido.
 Criar as rotas da API para gerenciar produtos, usuários, aluguéis, etc.
 Desenvolver os componentes da interface do usuário no AngularJS.
