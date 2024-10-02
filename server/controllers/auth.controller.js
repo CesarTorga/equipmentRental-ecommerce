@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const users = require('../data/users'); // Import user data
+const users = require('../data/users'); // Importa user data
 const jwtSecret = 'your-secret-key';
 
 exports.login = async(req, res) => {

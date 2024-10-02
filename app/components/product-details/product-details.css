@@ -17,7 +17,8 @@
 
 .product-title {
   font-size: 1.8em; /* Aumenta o tamanho da fonte */
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 /* Estilos para o card de informações do produto */

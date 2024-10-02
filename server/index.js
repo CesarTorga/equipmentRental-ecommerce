@@ -6,7 +6,6 @@ const port = 3005;
 
 const authRoutes = require('./routes/auth.routes');
 const productRoutes = require('./routes/product.routes');
-// const storeRoutes = require('./routes/store.routes');
 
 app.use(cors()); 
 app.use(express.json());

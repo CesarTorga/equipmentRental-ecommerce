@@ -9,11 +9,11 @@
 
   <div class="product-grid">
     <div class="product-card" ng-repeat="product in vm.filteredProducts"> 
-      <a ng-href="#!/products/{{product.id}}"> <!-- Link to product details -->
+      <a ng-href="#!/products/{{product.id}}"> <!-- Link para a página de details -->
         <img ng-src="{{product.image}}" alt="{{product.name}}">    
       </a>
       <h3>{{product.name}}</h3>
-        <p class="description">{{product.description}}</p> <!-- Limit description length -->
+        <p class="description">{{product.description}}</p> 
       <p class="price">Valor aluguel: ${{product.rentalPrices.day}}/dia</p> 
       <button ng-click="vm.addToCart(product)">Adicione ao Carrinho</button> 
     </div>
