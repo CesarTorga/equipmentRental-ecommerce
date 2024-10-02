@@ -1,7 +1,7 @@
-#Equipment Rental E-commerce
+Equipment Rental E-commerce
 Este projeto consiste em um e-commerce para aluguel de equipamentos desenvolvido com AngularJS (front-end) e Node.js (back-end).
 
-##Estrutura do Projeto
+Estrutura do Projeto
 O projeto possui a seguinte estrutura de pastas:
 
 equipmentRental-ecommerce/
@@ -25,25 +25,24 @@ equipmentRental-ecommerce/
 │   │   └── productsRoutes.js
 │   └── server.js            # Arquivo principal do servidor Node.js
 └── index.html               # Página inicial do projeto
-
-##Tecnologias Utilizadas
-**Front-end:**
+Tecnologias Utilizadas
+--> Front-end:
 * AngularJS
 * HTML
 * CSS
 * JavaScript
 
-**Back-end:**
+--> Back-end:
 * Node.js
 * Express.js (sugestão para framework web)
   
-##Instalação e Execução
+Instalação e Execução
 Pré-requisitos:
 
 Node.js e npm instalados
 Um gerenciador de pacotes como o npm ou yarn
 
-##Passos:
+Passos:
 Clonar o repositório:
 
 git clone https://github.com/seu-usuario/equipmentRental-ecommerce.git
@@ -70,11 +69,11 @@ cd app
 npm start
 O servidor de desenvolvimento do front-end estará disponível na porta 3000.
 
-**Acessar a aplicação:**
+Acessar a aplicação:
 
 Abra o navegador e acesse http://localhost:3000/.
 
-##Próximos Passos
+Próximos Passos
 Implementar a camada de dados e conectar ao banco de dados escolhido.
 Criar as rotas da API para gerenciar produtos, usuários, aluguéis, etc.
 Desenvolver os componentes da interface do usuário no AngularJS.
