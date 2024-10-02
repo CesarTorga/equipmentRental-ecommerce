@@ -1,7 +1,7 @@
 angular.module('rentalApp')
   .controller('ProductListController', ProductListController);
 
-function ProductListController($http, CartService) {
+function ProductListController($http, CartService, AuthService) {
   var vm = this;
   vm.products = [];
   vm.filteredProducts = [];
@@ -14,6 +14,8 @@ function ProductListController($http, CartService) {
   }).catch(function(error){
     console.log(error);
   });
+
+  vm.isAuthenticated = AuthService.isAuthenticated();
 
   vm.filterProducts = function() {
     // Lógica de filtro

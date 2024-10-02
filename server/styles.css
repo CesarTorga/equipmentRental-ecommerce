@@ -1,27 +1,29 @@
-body {
-    display: flex;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
-    height: 110vh; /* Define a altura como 100% da altura da janela */
-    margin: 0; /* Remove as margens padrão do body */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffa600;
+    padding: 10px;
+  
+    display: flex; /* Ativa o layout Flexbox */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    align-items: center; /* Alinha os elementos verticalmente no centro */
 }
   
-header {
-position: absolute; /* Posiciona o header no topo */
-top: 0;
-left: 0;
-right: 0; /* Ocupa toda a largura da tela */
-background-color: #ffa600; /* Cor de fundo do header (opcional) */
-padding: 10px; /* Espaçamento interno do header (opcional) */
-}
-
-ng-view {
-    height: calc(110vh - 210px); /* Altura total da janela - altura do header */
-    overflow-y: auto; /* Adiciona uma barra de rolagem se necessário */
-}
-
-.title {
+  header img {
+    max-width: 120px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    flex: 0 0 auto; /* Evita que a imagem se expanda ou encolha */
+  }
+  
+  .subtitle {
     font-family: 'Open Sans', sans-serif;
-}
+    font-size: 30px;
+    flex: 1 1 auto; /* Permite que o subtítulo ocupe o espaço restante */
+    text-align: center; /* Centraliza o texto do subtítulo */
+  }
+  
+  header div { /* Estilos para o container do botão */
+    flex: 0 0 auto; /* Evita que o container se expanda ou encolha */
+  }

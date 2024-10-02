@@ -3,6 +3,9 @@ angular.module('rentalApp')
 
 function LoginController($http, $location, AuthService) {
   var vm = this; // "Controller as" sintaxe
+  vm.email = '';
+  vm.password = '';
+  vm.errorMessage = '';
 
   vm.login = async function() {
     $http.post('http://localhost:3005/login', { 
@@ -15,11 +18,11 @@ function LoginController($http, $location, AuthService) {
     }, function(error) {
       console.error("Login failed:", error);
       if (error.status === 401) {
-        vm.loginError = "Invalid email or password.";
+        vm.errorMessage = "Email ou Senha inválida, tente novamente!";
       } else if (error.status === 405) {
-        vm.loginError = "Method not allowed. Please contact support.";
+        vm.errorMessage = "Método não permitido. Entre em contato com o suporte.";
       } else {
-        vm.loginError = "An error occurred. Please try again later.";
+        vm.errorMessage = "Ocorreu um erro. Tente novamente mais tarde.";
       }
     })
     .catch(function(error){

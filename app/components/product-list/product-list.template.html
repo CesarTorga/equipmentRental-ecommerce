@@ -2,24 +2,28 @@
   <link rel="stylesheet" href="app/components/product-list/product-list.css">
 </head>
 
+
 <body>
-  <h2>Nossos Produtos</h2>
+  <h2 class="title">Nossos Produtos</h2>
+  <input type="text" ng-model="vm.searchTerm" placeholder="Busque o equipamento desejado..." ng-change="vm.filterProducts()">
 
-  <input type="text" ng-model="vm.searchTerm" placeholder="Search products..." ng-change="vm.filterProducts()">
+  <div class="search-and-grid">
 
-  <div class="product-grid">
-    <div class="product-card" ng-repeat="product in vm.filteredProducts"> 
-      <a ng-href="#!/products/{{product.id}}"> <!-- Link para a página de details -->
-        <img ng-src="{{product.image}}" alt="{{product.name}}">    
-      </a>
-      <h3>{{product.name}}</h3>
-        <p class="description">{{product.description}}</p> 
-      <p class="price">Valor aluguel: ${{product.rentalPrices.day}}/dia</p> 
-      <button ng-click="vm.addToCart(product)">Adicione ao Carrinho</button> 
+    <div class="product-grid">
+      <div class="product-card" ng-repeat="product in vm.filteredProducts"> 
+        <a ng-href="#!/products/{{product.id}}"> <!-- Link para a página de details -->
+          <img ng-src="{{product.image}}" alt="{{product.name}}">    
+        </a>
+        <h3>{{product.name}}</h3>
+          <p class="description">{{product.description}}</p> 
+        <p class="price">Valor aluguel: ${{product.rentalPrices.day}}/dia</p> 
+        <button ng-click="vm.addToCart(product)">Adicione ao Carrinho</button> 
+      </div>
     </div>
   </div>
+  
 
-  <h2>Carrinho</h2>
+  <h2 class="title">Carrinho</h2>
   <div class="cart-card">
     <ul>
       <li ng-repeat="item in vm.cartItems"> 

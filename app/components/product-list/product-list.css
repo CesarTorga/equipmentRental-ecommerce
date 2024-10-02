@@ -1,3 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    height: 100vh; /* Define a altura como 100% da altura da janela */
+    margin: 0; /* Remove as margens padrão do body */
+}
+
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+}
+
+input[type="text"] { 
+    width: 300px; /* Aumenta a largura */
+    padding: 8px; /* Adiciona preenchimento interno */
+    border-radius: 5px; /* Arredonda as bordas */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do campo */
+}
+  
+input[type="text"]:focus { /* Estilos quando o input está em foco */
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adiciona um efeito de sombra */
+}
+
+.search-input {
+    /* ... (outros estilos para o campo de busca) */
+    margin-left: 20px; /* Adiciona uma margem esquerda */
+}
+
+.search-and-grid {
+    display: flex; /* Ativa o layout Flexbox */
+    align-items: flex-start; /* Alinha os elementos no início do eixo vertical (topo) */
+}
+
 .product-grid {
     display: grid; /* Ativa o layout Grid */
     grid-template-columns: repeat(3, 1fr); /* Define as colunas do grid */
@@ -29,7 +68,7 @@
 }
 
 .cart-card {
-    border: 2px solid #ffa600;;
+    border: 4px solid #ffa600;;
     padding: 15px;
     border-radius: 5px;
     margin-top: 20px;
